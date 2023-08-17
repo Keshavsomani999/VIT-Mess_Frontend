@@ -20,11 +20,14 @@ export default function Form() {
 
     const orderHandler = async(e) =>{
         e.preventDefault();
+        console.log("1");
         const config = {
           headers: { "Content-Type": "application/json" },
         };
         try {
+          console.log("2");
           await axios.post("https://vit-mess-backend.vercel.app/api/v1", order, config);
+          console.log("3");
           setOrder({
             name: "",
             reg: "",
