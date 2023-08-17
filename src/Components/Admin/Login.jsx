@@ -21,6 +21,7 @@ const loginHandler = async(e) =>{
     console.log("001");
     await axios.get("https://vit-mess-backend.vercel.app/api/v1/admin", { responseType: 'blob'}).then((response) => {
       // Create a temporary anchor element to trigger the download
+      // https://vit-mess-backend.vercel.app/api/v1/admin
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const a = document.createElement('a');
       console.log("002");

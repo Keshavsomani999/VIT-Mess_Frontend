@@ -22,7 +22,7 @@ export default function Form() {
         e.preventDefault();
         console.log("1");
         const config = {
-          headers: { "Content-Type": "application/json","Accept":"application/json, text/plain, /" },
+          headers: { "Content-Type": "application/json"},
           
         };
         try {
