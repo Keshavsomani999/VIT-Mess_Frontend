@@ -18,15 +18,18 @@ const loginChange = (e) => {
 const loginHandler = async(e) =>{
   e.preventDefault();
   if (loginData.username === "Admin" && loginData.password ==="admin") {
+    console.log("001");
     await axios.get("https://vit-mess-backend.vercel.app/api/v1/admin", { responseType: 'blob' }).then((response) => {
       // Create a temporary anchor element to trigger the download
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const a = document.createElement('a');
+      console.log("002");
       a.href = url;
       a.download = 'Students.xlsx';
       document.body.appendChild(a);
       a.click();
       a.remove();
+      console.log("003");
     })
     .catch((error) => {
       console.error(error);
