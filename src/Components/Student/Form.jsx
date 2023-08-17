@@ -23,6 +23,8 @@ export default function Form() {
         console.log("1");
         const config = {
           headers: { "Content-Type": "application/json" },
+          url: baseUrl, headers:{"Accept":"application/json, text/plain, /","Content-Type": "multipart/form-data"},
+          
         };
         try {
           console.log("2");
